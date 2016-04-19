@@ -120,7 +120,7 @@ baseurl: /
 markdown: kramdown
 safe: false
 highlighter: rouge
-title: 飞鸟集
+title: barryzxy
 description: 人生到处知何似，应似飞鸿踏雪泥
 theme: leap-day
 disqusname: barryzxy
