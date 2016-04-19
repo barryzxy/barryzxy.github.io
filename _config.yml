@@ -116,7 +116,7 @@ disqus:
 #################################### global configure #######################################
 
 username: barryzxy
-baseurl: /
+baseurl: /blog
 markdown: kramdown
 safe: false
 highlighter: rouge
