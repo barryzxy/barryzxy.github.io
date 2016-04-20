@@ -46,7 +46,7 @@ timezone:      null
 title: Jekyll Theme
 description: Just another Jekyll theme design and code by zhanxin.info.
 keywords: Jekyll Theme
-url: /StrayBirds
+url: #/StrayBirds
 feed: /atom.xml
 favicon: http://jekyllrb.com/favicon.png
 
@@ -109,7 +109,7 @@ customLinks:
 
 #comment config
 disqus:
-  config: false
+  config: false # false
   id: barryzxy
 
 
@@ -121,7 +121,7 @@ markdown: kramdown
 safe: false
 highlighter: rouge
 title: barryzxy
-description: 人生到处知何似，应似飞鸿踏雪泥
+description: 做一个好人
 theme: kunka
 disqusname: barryzxy
 
