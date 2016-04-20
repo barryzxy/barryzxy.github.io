@@ -1,7 +1,7 @@
 ---
 layout: post
 title: mbed资讯44
-category: 生活
+category: 技术
 comments: true
 ---
 
