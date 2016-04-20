@@ -122,7 +122,7 @@ safe: false
 highlighter: rouge
 title: barryzxy
 description: 人生到处知何似，应似飞鸿踏雪泥
-theme: iLotus-jekyll
+theme: kunka
 disqusname: barryzxy
 
 # theme can be: hack, leap-day, merlot, midnight, minimal, modernist, slate, time-machine, kunka iLotus-jekyll
