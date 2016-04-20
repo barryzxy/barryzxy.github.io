@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Java 中的并发
-category: mbed
+category: 爱好
 comments: true
 ---
 
