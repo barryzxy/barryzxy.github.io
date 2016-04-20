@@ -80,15 +80,22 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="barryzxy">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="线程调度与管理一个典型的简单程序会设计成一个串行的系统运行：按照准确的指令步骤一次一个指令的运行。但是这种方法对于复杂一些的实时应用是不可行的，因为它们通常需要在固定的时间内“同时”处理多个输入输出，实时软件应用程序应该设计成一个并行的系统。
+并行设计需要开发人员把一个应用分解成一个个小的，可调度的，序列化的程序单元。当合理的划分任务，正确的并行执行时，这种设计能够让系统满足实时系统的性能及时间的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="rt-thread2">
+<meta property="og:url" content="http://yoursite.com/2016/04/20/2016-04-11-thread/index.html">
 <meta property="og:site_name" content="barryzxy">
-<meta property="og:description">
+<meta property="og:description" content="线程调度与管理一个典型的简单程序会设计成一个串行的系统运行：按照准确的指令步骤一次一个指令的运行。但是这种方法对于复杂一些的实时应用是不可行的，因为它们通常需要在固定的时间内“同时”处理多个输入输出，实时软件应用程序应该设计成一个并行的系统。
+并行设计需要开发人员把一个应用分解成一个个小的，可调度的，序列化的程序单元。当合理的划分任务，正确的并行执行时，这种设计能够让系统满足实时系统的性能及时间的">
+<meta property="og:image" content="http://yoursite.com/figures/rt_thread_ready.png">
+<meta property="og:image" content="http://yoursite.com/figures/rt_thread_states.png">
+<meta property="og:updated_time" content="2016-04-20T05:33:35.751Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="barryzxy">
-<meta name="twitter:description">
+<meta name="twitter:title" content="rt-thread2">
+<meta name="twitter:description" content="线程调度与管理一个典型的简单程序会设计成一个串行的系统运行：按照准确的指令步骤一次一个指令的运行。但是这种方法对于复杂一些的实时应用是不可行的，因为它们通常需要在固定的时间内“同时”处理多个输入输出，实时软件应用程序应该设计成一个并行的系统。
+并行设计需要开发人员把一个应用分解成一个个小的，可调度的，序列化的程序单元。当合理的划分任务，正确的并行执行时，这种设计能够让系统满足实时系统的性能及时间的">
+<meta name="twitter:image" content="http://yoursite.com/figures/rt_thread_ready.png">
 
 
 
@@ -106,7 +113,7 @@
   };
 </script>
 
-  <title> barryzxy </title>
+  <title> rt-thread2 | barryzxy </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -127,9 +134,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -206,9 +211,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -228,10 +233,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/04/20/2016-04-11-thread/" itemprop="url">
-                  rt-thread2
-                </a>
+                rt-thread2
               
             
           </h1>
@@ -290,9 +292,7 @@
       
 
       
-        
-          
-            <h1 id="线程调度与管理"><a href="#线程调度与管理" class="headerlink" title="线程调度与管理"></a>线程调度与管理</h1><p>一个典型的简单程序会设计成一个串行的系统运行：按照准确的指令步骤一次一个指令的运行。但是这种方法对于复杂一些的实时应用是不可行的，因为它们通常需要在固定的时间内“同时”处理多个输入输出，实时软件应用程序应该设计成一个并行的系统。</p>
+        <h1 id="线程调度与管理"><a href="#线程调度与管理" class="headerlink" title="线程调度与管理"></a>线程调度与管理</h1><p>一个典型的简单程序会设计成一个串行的系统运行：按照准确的指令步骤一次一个指令的运行。但是这种方法对于复杂一些的实时应用是不可行的，因为它们通常需要在固定的时间内“同时”处理多个输入输出，实时软件应用程序应该设计成一个并行的系统。</p>
 <p>并行设计需要开发人员把一个应用分解成一个个小的，可调度的，序列化的程序单元。当合理的划分任务，正确的并行执行时，这种设计能够让系统满足实时系统的性能及时间的要求。</p>
 <h2 id="实时系统的需求"><a href="#实时系统的需求" class="headerlink" title="实时系统的需求"></a>实时系统的需求</h2><p>如第二章里描述的，系统的实时性指的是在固定的时间内正确地对外部事件做出响应。这个“时间内”(英文叫做deadline、有时中文也翻译成时间约束)，系统内部会做一些处理，例如输入数据的分析计算，加工处理等。而在这段时间之外，系统可能会空闲下来，做一些空余的事。</p>
 <p>例如一个手机终端，当一个电话拨入的时候，系统应当及时发出振铃、声音提示以通知主人有来电，询问是否进行接听。而在非电话拨入的时候，人们可以用它进行一些其它工作，例如听音乐，玩游戏等。</p>
@@ -673,16 +673,18 @@ rt_err_t rt_thread_delay(rt_tick_t tick);
 <p>线程运行时间长度被定义为，在线程所关心的一种事件或多种事件触发状态下，线程由阻塞态跃迁为就绪态执行设定的工作，再从就绪态跃迁为阻塞态所需要的时间（一般还应加上这段时间内，这个线程不会被其它线程所抢占的先决条件）。线程运行时间长度将和线程的优先级设计密切相关，同时也决定着设计的系统是否能够满足预计的实时响应的指标。</p>
 <p>例如，对于事件A对应的服务线程Ta，系统要求的实时响应指标是1ms，而Ta的最大运行时间是500us。此时，系统中还存在着以50ms为周期的另一线程Tb，它每次运行的最大时间长度是100us。在这种情况下，即使把线程Tb的优先级抬到比Ta更高的位置，对系统的实时性指标也没什么影响（因为即使在Ta的运行过程中，Tb抢占了Ta的资源，但在规定的时间内(1ms)，Ta也能够完成对事件A的响应）。</p>
 
-          
-        
       
     </div>
     
     <div>
       
+        
+      
     </div>
 
     <div>
+      
+        
       
     </div>
 
@@ -690,243 +692,32 @@ rt_err_t rt_thread_delay(rt_tick_t tick);
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/04/20/2016-04-10-introduction/" rel="next" title="introdution">
+                <i class="fa fa-chevron-left"></i> introdution
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/04/20/2016-04-10-introduction/" itemprop="url">
-                  introdution
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-04-20T20:45:41+08:00" content="2016-04-20">
-              2016-04-20
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><a href="http://www.rt-thread.org" target="_blank" rel="external">RT-Thread</a>是一款由中国开源社区主导开发的开源嵌入式实时操作系统（遵循GPLv2许可协议），它包含实时嵌入式系统相关的各个组件：实时操作系统内核，TCP/IP协议栈、文件系统、libc接口、图形界面等。</p>
-<p>本手册是RT-Thread开源嵌入式实时操作系统的使用手册。</p>
-<h2 id="RT-Thread-的软件结构"><a href="#RT-Thread-的软件结构" class="headerlink" title="RT-Thread 的软件结构"></a>RT-Thread 的软件结构</h2><p><img src="figures/System_Arch.png" alt="RT-Thread软件结构"></p>
-<p>RT-Thread实时操作系统是一个分层的操作系统，它包括了：</p>
-<ul>
-<li>底层移植、驱动层，这层与硬件密切相关，由Drivers和CPU移植相构成。</li>
-<li>硬实时内核，这层是RT-Thread的核心，包括了内核系统中对象的实现，例如多线程及其调度，信号量，邮箱，消息队列，内存管理，定时器等实现。</li>
-<li>组件层，这些是基于RT-Thread核心基础上的外围组件，例如文件系统，命令行shell接口，lwIP轻型TCP/IP协议栈，GUI图形用户界面等。</li>
-</ul>
-<p>RT-Thread在设计及后续的发展方向上会力图保持RT-Thread自己本身的特色：</p>
-<ul>
-<li>小巧的内核及周边组件；</li>
-<li>清晰、简单、低耦合的系统结构；</li>
-<li>面向对象，类UNIX的编程风格；</li>
-</ul>
-<h2 id="开发、维护"><a href="#开发、维护" class="headerlink" title="开发、维护"></a>开发、维护</h2><p>RT-Thread的主要开发团队在上海或者说中国的长三角地区，大家主要利用业余时间进行RT-Thread的开发和维护，同时也接受开发者，爱好者，以及专业嵌入式领域公司向RT-Thread捐赠代码。</p>
-<p>RT-Thread以一年为开发、发布周期。RT-Thread的每一个版本都会设定一个目标，而后的一年开发周期以这个为目标进行开发、演化改进，同时按照每个季度一个测试版本的形式进行推进。发布的版本包括两种：</p>
-<ul>
-<li>一种是正式版本（或者说稳定版本，维护版本），例如当前的1.1.x正式版本，它是1.1.0正式版本的bug fix版本。在功能上并不添加新的功能，而着重于已有bug的修正；</li>
-<li>一种是测试版本（或者说开发版本），例如当前的1.2.0 beta版本。它是以一年期设定目标而演进，完善的版本，相对来说不那么稳定，但具备新的功能；</li>
-</ul>
-<p>每个开发版本会提前设定出开发目标，一般是通过邮件、论坛进行沟通后进行；同时每年在上海也会有一到两次的开发者会议，会议上会讨论新版本的目标，或者大版本新的方向。</p>
-<p>在开发活动上，RT-Thread相类似的按照上面的软件体系结构划分成三个部分：</p>
-<ul>
-<li>内核（kernel），这个是RT-Thread的核心，也是根本；</li>
-<li>组件（component），基于核心之上，把一些功能模块划分成独立的一个个组件模块，做到组件与组件之间的低耦合，组件内部的高内聚；</li>
-<li>分支（porting），这个是RT-Thread支持的一个个芯片移植，外设驱动等；</li>
-</ul>
-<p>这三部分每部分都有维护人，维护人应切实地保证相关部分的正常运行。当前的RT-Thread开发版本放在<a href="http://github.com" target="_blank" rel="external">github.com</a>上，欢迎每个开发者、爱好者向RT-Thread提交pull request。每个组件、分支的维护人在收到pull request后，会决定是否合并到开发分支中。开发者、爱好者提交的代码应该符合RT-Thread的编程规范。</p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/20/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-04-20T18:36:55+08:00" content="2016-04-20">
-              2016-04-20
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -934,6 +725,10 @@ rt_err_t rt_thread_delay(rt_tick_t tick);
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -953,8 +748,17 @@ rt_err_t rt_thread_delay(rt_tick_t tick);
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/default_avatar.jpg"
@@ -997,6 +801,17 @@ rt_err_t rt_thread_delay(rt_tick_t tick);
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线程调度与管理"><span class="nav-number">1.</span> <span class="nav-text">线程调度与管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实时系统的需求"><span class="nav-number">1.1.</span> <span class="nav-text">实时系统的需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程调度器"><span class="nav-number">1.2.</span> <span class="nav-text">线程调度器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程控制块"><span class="nav-number">1.3.</span> <span class="nav-text">线程控制块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程状态"><span class="nav-number">1.4.</span> <span class="nav-text">线程状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#空闲线程"><span class="nav-number">1.5.</span> <span class="nav-text">空闲线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#调度器初始化"><span class="nav-number">1.5.1.</span> <span class="nav-text">调度器初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动调度器"><span class="nav-number">1.5.2.</span> <span class="nav-text">启动调度器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行调度"><span class="nav-number">1.5.3.</span> <span class="nav-text">执行调度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置调度器钩子"><span class="nav-number">1.5.4.</span> <span class="nav-text">设置调度器钩子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程相关接口"><span class="nav-number">1.6.</span> <span class="nav-text">线程相关接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程创建"><span class="nav-number">1.6.1.</span> <span class="nav-text">线程创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程删除"><span class="nav-number">1.6.2.</span> <span class="nav-text">线程删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程初始化"><span class="nav-number">1.6.3.</span> <span class="nav-text">线程初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程脱离"><span class="nav-number">1.6.4.</span> <span class="nav-text">线程脱离</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程启动"><span class="nav-number">1.6.5.</span> <span class="nav-text">线程启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#当前线程"><span class="nav-number">1.6.6.</span> <span class="nav-text">当前线程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程让出处理器"><span class="nav-number">1.6.7.</span> <span class="nav-text">线程让出处理器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程睡眠"><span class="nav-number">1.6.8.</span> <span class="nav-text">线程睡眠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程挂起"><span class="nav-number">1.6.9.</span> <span class="nav-text">线程挂起</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程恢复"><span class="nav-number">1.6.10.</span> <span class="nav-text">线程恢复</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程控制"><span class="nav-number">1.6.11.</span> <span class="nav-text">线程控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化空闲线程"><span class="nav-number">1.6.12.</span> <span class="nav-text">初始化空闲线程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置空闲线程钩子"><span class="nav-number">1.6.13.</span> <span class="nav-text">设置空闲线程钩子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程设计"><span class="nav-number">1.7.</span> <span class="nav-text">线程设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#程序的运行上下文"><span class="nav-number">1.7.1.</span> <span class="nav-text">程序的运行上下文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程设计要点"><span class="nav-number">1.7.2.</span> <span class="nav-text">线程设计要点</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -1093,6 +908,10 @@ rt_err_t rt_thread_delay(rt_tick_t tick);
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
