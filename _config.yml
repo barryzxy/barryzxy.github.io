@@ -56,7 +56,7 @@ nav:
     url: index.html
   - text: 分类目录 
     url: navigations/categories.html
-  - text: 文章
+  - text: 文章归档
     url: navigations/archives.html
   - text: 联系我
     url: navigations/contact.html
