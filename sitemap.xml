@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://www.mbedtalk.com/index.html</loc>
+    
+    <lastmod>2016-04-22T04:39:01.076Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/themes/index.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.260Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/rt-thread/timer.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.258Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/rt-thread/index.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.254Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/plugins/index.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.250Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/writing.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.221Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/variables.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.219Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/troubleshooting.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.216Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/themes.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.213Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/templates.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.212Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/tag-plugins.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.211Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/setup.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.210Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/server.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.209Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/plugins.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.206Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/permalinks.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.205Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/migration.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.202Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/internationalization.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.201Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/index.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.200Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/helpers.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.199Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/generating.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.196Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/front-matter.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.193Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/deployment.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.190Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/data-files.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.186Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/contributing.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.183Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/configuration.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.179Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/commands.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.175Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/docs/asset-folders.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.172Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/themes.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.169Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/tag.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.165Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/scaffolds.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.161Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/router.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.160Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/rendering.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.156Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/renderer.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.155Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/processor.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.154Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/posts.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.151Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/migrator.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.148Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/locals.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.145Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/index.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.144Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/helper.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.143Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/generator.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.140Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/filter.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.138Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/events.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.137Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/deployer.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.134Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/console.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.130Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/api/box.html</loc>
+    
+    <lastmod>2016-04-22T01:02:48.128Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/news/2016/02/28/hexo-3-2-released/</loc>
+    
+    <lastmod>2016-04-22T01:02:48.112Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/news/2015/03/05/hexo-3-0-released/</loc>
+    
+    <lastmod>2016-04-22T01:02:48.112Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/news/2015/02/27/new-documentation-and-registry/</loc>
+    
+    <lastmod>2016-04-22T01:02:48.112Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/news/2014/07/13/hexo-2-8-released/</loc>
+    
+    <lastmod>2016-04-22T01:02:48.110Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mbedtalk.com/news/2014/06/14/hexo-2-7-released/</loc>
+    
+    <lastmod>2016-04-22T01:02:48.109Z</lastmod>
+    
+  </url>
+  
+</urlset>
