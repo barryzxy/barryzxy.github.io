@@ -1,0 +1,8 @@
+# 这个菜单目录对应
+news: /news/
+cmsis-rtos: /cmsis-rtos/
+network: /network/
+mbed: /mbed/
+tools: /tools/
+plugins: /plugins/
+themes: /themes/
